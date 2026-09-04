@@ -1,0 +1,14 @@
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+# Pinned to 0.130.0: crewai>=1.0 replaced the classic single-loop
+# CrewAgentExecutor with a planner/"todos"-based step executor that never
+# calls BaseLLM.call() the way mock_llm.py (and the brief's MOCK_LLM design)
+# expects, so any 1.x install breaks every crew run under MOCK_LLM.
+crewai==0.130.0
+autogen-agentchat>=0.4.0
+autogen-core>=0.4.0
+autogen-ext>=0.4.0
+langchain-core>=0.3.0
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.7.0

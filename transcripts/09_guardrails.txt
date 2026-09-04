@@ -1,0 +1,4 @@
+{'masked_text': 'My PAN is [PAN_REDACTED] and my Aadhaar is [AADHAAR_REDACTED], please debit account number: [BANK_ACCOUNT_REDACTED] for the EMI.', 'findings': [{'type': 'bank_account_number', 'original': '123456789012'}, {'type': 'pan', 'original': 'ABCDE1234F'}, {'type': 'aadhaar', 'original': '1234 5678 9012'}], 'pii_detected': True}
+{'injection_detected': True, 'matched_pattern': 'Ignore all previous instructions'}
+{'grounded': False, 'top_similarity': 0.12, 'threshold': 0.42, 'refused': True}
+{'grounded': True, 'top_similarity': 0.71, 'threshold': 0.42, 'refused': False}

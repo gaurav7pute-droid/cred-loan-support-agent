@@ -1,0 +1,15 @@
+=== Scenario 1: fully-grounded draft -> APPROVED unchanged ===
+{
+  "approved": true,
+  "final_answer": "Cash withdrawals via your Cred credit card attract a 2.5% fee with a minimum of INR 500, plus interest from the day of withdrawal with no interest-free period.",
+  "reason": "Fully supported by the retrieved KB context (kb-03); no changes needed."
+}
+
+=== Scenario 2: draft with an INJECTED ungrounded claim -> REVISED ===
+{
+  "approved": false,
+  "final_answer": "Cash withdrawals via your Cred credit card are NOT free: they attract a 2.5% fee (minimum INR 500) plus interest from the day of withdrawal, with no interest-free period.",
+  "reason": "Removed an ungrounded claim ('completely free with no fees or limits') that contradicted kb-03's documented 2.5% cash-withdrawal fee; replaced with the grounded figure."
+}
+
+VERIFIED: scenario 1 approved unchanged, scenario 2 was revised to remove the injected ungrounded claim.

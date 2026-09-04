@@ -1,0 +1,9 @@
+fixed: 51 chunks, sentence: 52 chunks
+  [fixed]    kb-05::fixed::0 A member who spots an unauthorized transaction must report it within 3 days of t
+  [fixed]    kb-05::fixed::1 guidelines. Upon report, the card or account is immediately blocked and a provis
+  [fixed]    kb-05::fixed::2 the investigation proceeds. The fraud investigation team has up to 90 days to co
+  [fixed]    kb-05::fixed::3 dispute is upheld, the provisional credit is made permanent; if rejected, the me
+  [sentence] kb-05::sent::0 A member who spots an unauthorized transaction must report it within 3 days of t
+  [sentence] kb-05::sent::1 Upon report, the card or account is immediately blocked and a provisional credit
+  [sentence] kb-05::sent::2 The fraud investigation team has up to 90 days to complete the review for domest
+  [sentence] kb-05::sent::3 If the dispute is upheld, the provisional credit is made permanent; if rejected,

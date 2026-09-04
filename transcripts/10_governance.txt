@@ -1,0 +1,3 @@
+Risk level: High -- Financial data (individual loan records, amounts, statuses) plus a fraud-escalation recommendation that can influence a real support decision -> High risk per the Low/Medium/High scheme, requiring groundedness refusal, PII masking end-to-end, independent second-agent review, and a runtime cost cap.
+normal: BudgetCheckResult(estimated_tokens=303, estimated_cost_usd=0.00061, budget_tokens=2000, allowed=True, reason='')
+oversized: BudgetCheckResult(estimated_tokens=2800, estimated_cost_usd=0.0056, budget_tokens=2000, allowed=False, reason='Estimated 2800 tokens exceeds the per-request budget of 2000 tokens -- request rejected before any LLM/tool call.')

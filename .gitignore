@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.chroma_store/
+logs/
+.venv/
+venv/
+*.egg-info/

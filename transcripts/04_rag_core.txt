@@ -1,0 +1,32 @@
+Collections built: {'fixed': 51, 'sentence': 52}
+In-scope top-1 similarities: ['0.531', '0.683', '0.654', '0.670', '0.536']
+Out-of-scope top-1 similarities: ['0.097', '0.190']
+min(in-scope)=0.531 max(out-of-scope)=0.190 chosen_threshold=0.361 (hardcoded IDK_THRESHOLD=0.42)
+
+Q: What documents do I need for KYC?
+  top_sim=0.531 grounded=True
+  A: Based on Cred policy: NRI applicants must submit a valid passport, visa or work permit, and an overseas address proof in addition to the standard KYC set. All joint holders must individually complete 
+
+Q: How is my EMI calculated?
+  top_sim=0.683 grounded=True
+  A: Based on Cred policy: The Equated Monthly Installment (EMI) is calculated using the standard reducing-balance formula EMI = P x r x (1+r)^n / ((1+r)^n - 1), where P is the principal, r is the monthly 
+
+Q: What is the annual fee on my credit card?
+  top_sim=0.654 grounded=True
+  A: Based on Cred policy: Cred-linked credit cards charge an annual fee between INR 500 and INR 5,000 depending on the card tier, which is waived if annual spend exceeds INR 200,000.
+
+Q: Can I close my savings account for free?
+  top_sim=0.670 grounded=True
+  A: Based on Cred policy: Savings accounts closed within 14 days of opening are closed free of charge; closure between 14 days and 12 months incurs a closure fee of INR 500.
+
+Q: What happens if I report a fraudulent transaction late?
+  top_sim=0.536 grounded=True
+  A: Based on Cred policy: A member who spots an unauthorized transaction must report it within 3 days of the transaction date to receive zero-liability protection under RBI's limited-liability guidelines.
+
+Q: What is the best recipe for butter chicken?
+  top_sim=0.097 grounded=False
+  A: I don't have grounded information about that in the Cred policy knowledge base, so I can't answer confidently. Please rephrase your question or contact a human support agent for anything outside loan 
+
+Q: Who won the cricket world cup last year?
+  top_sim=0.190 grounded=False
+  A: I don't have grounded information about that in the Cred policy knowledge base, so I can't answer confidently. Please rephrase your question or contact a human support agent for anything outside loan 

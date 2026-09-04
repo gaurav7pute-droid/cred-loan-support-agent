@@ -1,0 +1,111 @@
+╭─────────────────── Crew Execution Started ───────────────────╮
+│                                                              │
+│  Crew Execution Started                                      │
+│  Name: crew                                                  │
+│  ID: bd36021e-e42b-4eee-bf19-6183f67c2da4                    │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+[1m[95m# Agent:[00m [1m[92mRetrieval Agent[00m
+[95m## Task:[00m [92mUse the rag_lookup tool to answer this Cred policy question: QUERY_START>>>What documents do I need for KYC?<<<QUERY_END[00m
+
+
+[1m[95m# Agent:[00m [1m[92mRetrieval Agent[00m
+[95m## Thought:[00m [92mThought: I should use the rag_lookup tool to answer this.[00m
+[95m## Using tool:[00m [92mrag_lookup[00m
+[95m## Tool Input:[00m [92m
+"{\"query\": \"What documents do I need for KYC?\"}"[00m
+[95m## Tool Output:[00m [92m
+Based on Cred policy: NRI applicants must submit a valid passport, visa or work permit, and an overseas address proof in addition to the standard KYC set. All joint holders must individually complete KYC; the account cannot be opened if any holder's KYC is incomplete. [sources: kb-04,kb-11][00m
+
+
+[1m[95m# Agent:[00m [1m[92mRetrieval Agent[00m
+[95m## Final Answer:[00m [92m
+Based on Cred policy: NRI applicants must submit a valid passport, visa or work permit, and an overseas address proof in addition to the standard KYC set. All joint holders must individually complete KYC; the account cannot be opened if any holder's KYC is incomplete. [sources: kb-04,kb-11][00m
+
+
+🚀 Crew: crew
+└── 📋 Task: 4076fc76-bbcc-445e-8f95-8c19e1b9b984
+    Assigned to: Retrieval Agent
+    Status: ✅ Completed
+    └── 🔧 Used rag_lookup (6)╭────────────────────── Task Completion ───────────────────────╮
+│                                                              │
+│  Task Completed                                              │
+│  Name: 4076fc76-bbcc-445e-8f95-8c19e1b9b984                  │
+│  Agent: Retrieval Agent                                      │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+[1m[95m# Agent:[00m [1m[92mLookup Agent[00m
+[95m## Task:[00m [92mNo loan application record_id was given in this request. Do not invent one -- respond with exactly NO_RECORD_ID_PROVIDED.[00m
+
+
+[1m[95m# Agent:[00m [1m[92mLookup Agent[00m
+[95m## Final Answer:[00m [92m
+NO_RECORD_ID_PROVIDED[00m
+
+
+🚀 Crew: crew
+├── 📋 Task: 4076fc76-bbcc-445e-8f95-8c19e1b9b984
+│   Assigned to: Retrieval Agent
+│   Status: ✅ Completed
+│   └── 🔧 Used rag_lookup (6)
+└── 📋 Task: 39707f8c-5522-45e0-8db2-5eaec86e4bbe
+    Assigned to: Lookup Agent
+    Status: ✅ Completed╭────────────────────── Task Completion ───────────────────────╮
+│                                                              │
+│  Task Completed                                              │
+│  Name: 39707f8c-5522-45e0-8db2-5eaec86e4bbe                  │
+│  Agent: Lookup Agent                                         │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+[1m[95m# Agent:[00m [1m[92mResponse Composer[00m
+[95m## Task:[00m [92mCombine the Retrieval Agent's and Lookup Agent's results above into one final, clear answer for the Cred member.[00m
+
+
+[1m[95m# Agent:[00m [1m[92mResponse Composer[00m
+[95m## Final Answer:[00m [92m
+Based on Cred policy: NRI applicants must submit a valid passport, visa or work permit, and an overseas address proof in addition to the standard KYC set. All joint holders must individually complete KYC; the account cannot be opened if any holder's KYC is incomplete. [sources: kb-04,kb-11]
+
+----------
+
+NO_RECORD_ID_PROVIDED[00m
+
+
+🚀 Crew: crew
+├── 📋 Task: 4076fc76-bbcc-445e-8f95-8c19e1b9b984
+│   Assigned to: Retrieval Agent
+│   Status: ✅ Completed
+│   └── 🔧 Used rag_lookup (6)
+├── 📋 Task: 39707f8c-5522-45e0-8db2-5eaec86e4bbe
+│   Assigned to: Lookup Agent
+│   Status: ✅ Completed
+└── 📋 Task: ebb28a48-6858-442a-8fe0-ac0e13f9d534
+    Assigned to: Response Composer
+    Status: ✅ Completed╭────────────────────── Task Completion ───────────────────────╮
+│                                                              │
+│  Task Completed                                              │
+│  Name: ebb28a48-6858-442a-8fe0-ac0e13f9d534                  │
+│  Agent: Response Composer                                    │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+╭────────────────────── Crew Completion ───────────────────────╮
+│                                                              │
+│  Crew Execution Completed                                    │
+│  Name: crew                                                  │
+│  ID: bd36021e-e42b-4eee-bf19-6183f67c2da4                    │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+POST /ask -> 200 {'trace_id': '81d9e5bc-641a-4e15-a596-21442a482b88', 'session_id': 'smoke-1', 'response': {'answer': "Based on Cred policy: NRI applicants must submit a valid passport, visa or work permit, and an overseas address proof in addition to the standard KYC set. All joint holders must individually complete KYC; the account cannot be opened if any holder's KYC is incomplete. [sources: kb-04,kb-11]\n\n----------\n\nNO_RECORD_ID_PROVIDED", 'used_rag': True, 'used_lookup': False, 'record_id': None, 'grounded': True, 'escalation_recommended': None, 'sources': ['kb-04', 'kb-11']}, 'cache_hit': False, 'latency_ms': 75.98}
+POST /add-document -> 200 {'trace_id': '7831136c-2f3f-4581-8379-970de97131f5', 'doc_id': 'kb-13', 'fixed_chunks_added': 1, 'sentence_chunks_added': 1}
+WS reply: {"trace_id":"5318a0b4-9a8b-4fd9-bbdc-4b550dec7291","session_id":"ws-smoke","response":{"answer":"Based on Cred policy: NRI applicants must submit a valid passport, visa or work permit, and an overseas address proof in addition to the standard KYC set. All joint holders must individually complete KYC
+WebSocket handled a clean disconnect without raising.
+POST /ask (oversized) -> 400 {'detail': 'Estimated 2800 tokens exceeds the per-request budget of 2000 tokens -- request rejected before any LLM/tool call.'}

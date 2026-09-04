@@ -1,0 +1,253 @@
+=== Query A: policy-only ===
+╭─────────────────── Crew Execution Started ───────────────────╮
+│                                                              │
+│  Crew Execution Started                                      │
+│  Name: crew                                                  │
+│  ID: 22c50bf1-3785-48ff-8777-070b3c765d60                    │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+[1m[95m# Agent:[00m [1m[92mRetrieval Agent[00m
+[95m## Task:[00m [92mUse the rag_lookup tool to answer this Cred policy question: QUERY_START>>>What documents do I need for KYC?<<<QUERY_END[00m
+
+
+[1m[95m# Agent:[00m [1m[92mRetrieval Agent[00m
+[95m## Thought:[00m [92mThought: I should use the rag_lookup tool to answer this.[00m
+[95m## Using tool:[00m [92mrag_lookup[00m
+[95m## Tool Input:[00m [92m
+"{\"query\": \"What documents do I need for KYC?\"}"[00m
+[95m## Tool Output:[00m [92m
+Based on Cred policy: NRI applicants must submit a valid passport, visa or work permit, and an overseas address proof in addition to the standard KYC set. All joint holders must individually complete KYC; the account cannot be opened if any holder's KYC is incomplete. [sources: kb-04,kb-11][00m
+
+
+[1m[95m# Agent:[00m [1m[92mRetrieval Agent[00m
+[95m## Final Answer:[00m [92m
+Based on Cred policy: NRI applicants must submit a valid passport, visa or work permit, and an overseas address proof in addition to the standard KYC set. All joint holders must individually complete KYC; the account cannot be opened if any holder's KYC is incomplete. [sources: kb-04,kb-11][00m
+
+
+🚀 Crew: crew
+└── 📋 Task: c69e5ec0-43a8-4665-80ce-4911b017075b
+    Assigned to: Retrieval Agent
+    Status: ✅ Completed
+    └── 🔧 Used rag_lookup (1)╭────────────────────── Task Completion ───────────────────────╮
+│                                                              │
+│  Task Completed                                              │
+│  Name: c69e5ec0-43a8-4665-80ce-4911b017075b                  │
+│  Agent: Retrieval Agent                                      │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+[1m[95m# Agent:[00m [1m[92mLookup Agent[00m
+[95m## Task:[00m [92mNo loan application record_id was given in this request. Do not invent one -- respond with exactly NO_RECORD_ID_PROVIDED.[00m
+
+
+[1m[95m# Agent:[00m [1m[92mLookup Agent[00m
+[95m## Final Answer:[00m [92m
+NO_RECORD_ID_PROVIDED[00m
+
+
+🚀 Crew: crew
+├── 📋 Task: c69e5ec0-43a8-4665-80ce-4911b017075b
+│   Assigned to: Retrieval Agent
+│   Status: ✅ Completed
+│   └── 🔧 Used rag_lookup (1)
+└── 📋 Task: 4618ad07-aaf7-4960-90b0-130d2ca0a45f
+    Assigned to: Lookup Agent
+    Status: ✅ Completed╭────────────────────── Task Completion ───────────────────────╮
+│                                                              │
+│  Task Completed                                              │
+│  Name: 4618ad07-aaf7-4960-90b0-130d2ca0a45f                  │
+│  Agent: Lookup Agent                                         │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+[1m[95m# Agent:[00m [1m[92mResponse Composer[00m
+[95m## Task:[00m [92mCombine the Retrieval Agent's and Lookup Agent's results above into one final, clear answer for the Cred member.[00m
+
+
+[1m[95m# Agent:[00m [1m[92mResponse Composer[00m
+[95m## Final Answer:[00m [92m
+Based on Cred policy: NRI applicants must submit a valid passport, visa or work permit, and an overseas address proof in addition to the standard KYC set. All joint holders must individually complete KYC; the account cannot be opened if any holder's KYC is incomplete. [sources: kb-04,kb-11]
+
+----------
+
+NO_RECORD_ID_PROVIDED[00m
+
+
+🚀 Crew: crew
+├── 📋 Task: c69e5ec0-43a8-4665-80ce-4911b017075b
+│   Assigned to: Retrieval Agent
+│   Status: ✅ Completed
+│   └── 🔧 Used rag_lookup (1)
+├── 📋 Task: 4618ad07-aaf7-4960-90b0-130d2ca0a45f
+│   Assigned to: Lookup Agent
+│   Status: ✅ Completed
+└── 📋 Task: ac09925c-7714-490d-8598-f2adbd1db21f
+    Assigned to: Response Composer
+    Status: ✅ Completed╭────────────────────── Task Completion ───────────────────────╮
+│                                                              │
+│  Task Completed                                              │
+│  Name: ac09925c-7714-490d-8598-f2adbd1db21f                  │
+│  Agent: Response Composer                                    │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+╭────────────────────── Crew Completion ───────────────────────╮
+│                                                              │
+│  Crew Execution Completed                                    │
+│  Name: crew                                                  │
+│  ID: 22c50bf1-3785-48ff-8777-070b3c765d60                    │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+{
+  "answer": "Based on Cred policy: NRI applicants must submit a valid passport, visa or work permit, and an overseas address proof in addition to the standard KYC set. All joint holders must individually complete KYC; the account cannot be opened if any holder's KYC is incomplete. [sources: kb-04,kb-11]\n\n----------\n\nNO_RECORD_ID_PROVIDED",
+  "used_rag": true,
+  "used_lookup": false,
+  "record_id": null,
+  "grounded": true,
+  "escalation_recommended": null,
+  "sources": [
+    "kb-04",
+    "kb-11"
+  ]
+}
+
+=== Query B: status-only ===
+╭─────────────────── Crew Execution Started ───────────────────╮
+│                                                              │
+│  Crew Execution Started                                      │
+│  Name: crew                                                  │
+│  ID: 6befb8c7-2894-4f9d-9514-83e0ba94390a                    │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+[1m[95m# Agent:[00m [1m[92mRetrieval Agent[00m
+[95m## Task:[00m [92mUse the rag_lookup tool to answer this Cred policy question: QUERY_START>>>What is the status of my loan application?<<<QUERY_END[00m
+
+
+[1m[95m# Agent:[00m [1m[92mRetrieval Agent[00m
+[95m## Thought:[00m [92mThought: I should use the rag_lookup tool to answer this.[00m
+[95m## Using tool:[00m [92mrag_lookup[00m
+[95m## Tool Input:[00m [92m
+"{\"query\": \"What is the status of my loan application?\"}"[00m
+[95m## Tool Output:[00m [92m
+Based on Cred policy: Personal Loan interest rates range from 11.5% to 24% per annum based on the applicant's credit score band, with scores above 750 qualifying for the lowest slab. Education Loans are available to Indian students with a confirmed admission offer at a recognized institution, with a parent or guardian as co-applicant for loans above INR 750,000. [sources: kb-01,kb-07][00m
+
+
+[1m[95m# Agent:[00m [1m[92mRetrieval Agent[00m
+[95m## Final Answer:[00m [92m
+Based on Cred policy: Personal Loan interest rates range from 11.5% to 24% per annum based on the applicant's credit score band, with scores above 750 qualifying for the lowest slab. Education Loans are available to Indian students with a confirmed admission offer at a recognized institution, with a parent or guardian as co-applicant for loans above INR 750,000. [sources: kb-01,kb-07][00m
+
+
+🚀 Crew: crew
+└── 📋 Task: 6326fc07-0656-480b-96ac-841b8b416bfc
+    Assigned to: Retrieval Agent
+    Status: ✅ Completed
+    └── 🔧 Used rag_lookup (2)╭────────────────────── Task Completion ───────────────────────╮
+│                                                              │
+│  Task Completed                                              │
+│  Name: 6326fc07-0656-480b-96ac-841b8b416bfc                  │
+│  Agent: Retrieval Agent                                      │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+[1m[95m# Agent:[00m [1m[92mLookup Agent[00m
+[95m## Task:[00m [92mCheck the status of loan application CRED-0010 using the check_loan_application_status tool.[00m
+
+
+[1m[95m# Agent:[00m [1m[92mLookup Agent[00m
+[95m## Thought:[00m [92mThought: I should use the check_loan_application_status tool to answer this.[00m
+[95m## Using tool:[00m [92mcheck_loan_application_status[00m
+[95m## Tool Input:[00m [92m
+"{\"record_id\": \"CRED-0010\"}"[00m
+[95m## Tool Output:[00m [92m
+{"record_id": "CRED-0010", "found": true, "status": "Under Review", "loan_amount_inr": 18530000, "flagged_for_fraud_review": true, "days_since_created": 17, "escalation_score": 0.7833, "escalation_threshold": 0.57, "recommend_escalation": true}[00m
+
+
+[1m[95m# Agent:[00m [1m[92mLookup Agent[00m
+[95m## Final Answer:[00m [92m
+{"record_id": "CRED-0010", "found": true, "status": "Under Review", "loan_amount_inr": 18530000, "flagged_for_fraud_review": true, "days_since_created": 17, "escalation_score": 0.7833, "escalation_threshold": 0.57, "recommend_escalation": true}[00m
+
+
+🚀 Crew: crew
+├── 📋 Task: 6326fc07-0656-480b-96ac-841b8b416bfc
+│   Assigned to: Retrieval Agent
+│   Status: ✅ Completed
+│   └── 🔧 Used rag_lookup (2)
+└── 📋 Task: a7acfd77-1db3-4a29-827c-277d62420d94
+    Assigned to: Lookup Agent
+    Status: ✅ Completed
+    └── 🔧 Used check_loan_application_status (1)╭────────────────────── Task Completion ───────────────────────╮
+│                                                              │
+│  Task Completed                                              │
+│  Name: a7acfd77-1db3-4a29-827c-277d62420d94                  │
+│  Agent: Lookup Agent                                         │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+[1m[95m# Agent:[00m [1m[92mResponse Composer[00m
+[95m## Task:[00m [92mCombine the Retrieval Agent's and Lookup Agent's results above into one final, clear answer for the Cred member.[00m
+
+
+[1m[95m# Agent:[00m [1m[92mResponse Composer[00m
+[95m## Final Answer:[00m [92m
+Based on Cred policy: Personal Loan interest rates range from 11.5% to 24% per annum based on the applicant's credit score band, with scores above 750 qualifying for the lowest slab. Education Loans are available to Indian students with a confirmed admission offer at a recognized institution, with a parent or guardian as co-applicant for loans above INR 750,000. [sources: kb-01,kb-07]
+
+----------
+
+{"record_id": "CRED-0010", "found": true, "status": "Under Review", "loan_amount_inr": 18530000, "flagged_for_fraud_review": true, "days_since_created": 17, "escalation_score": 0.7833, "escalation_threshold": 0.57, "recommend_escalation": true}[00m
+
+
+🚀 Crew: crew
+├── 📋 Task: 6326fc07-0656-480b-96ac-841b8b416bfc
+│   Assigned to: Retrieval Agent
+│   Status: ✅ Completed
+│   └── 🔧 Used rag_lookup (2)
+├── 📋 Task: a7acfd77-1db3-4a29-827c-277d62420d94
+│   Assigned to: Lookup Agent
+│   Status: ✅ Completed
+│   └── 🔧 Used check_loan_application_status (1)
+└── 📋 Task: 373a2d53-c3a6-4017-b0b2-20d5d3b6d89f
+    Assigned to: Response Composer
+    Status: ✅ Completed╭────────────────────── Task Completion ───────────────────────╮
+│                                                              │
+│  Task Completed                                              │
+│  Name: 373a2d53-c3a6-4017-b0b2-20d5d3b6d89f                  │
+│  Agent: Response Composer                                    │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+╭────────────────────── Crew Completion ───────────────────────╮
+│                                                              │
+│  Crew Execution Completed                                    │
+│  Name: crew                                                  │
+│  ID: 6befb8c7-2894-4f9d-9514-83e0ba94390a                    │
+│                                                              │
+│                                                              │
+╰──────────────────────────────────────────────────────────────╯
+
+{
+  "answer": "Based on Cred policy: Personal Loan interest rates range from 11.5% to 24% per annum based on the applicant's credit score band, with scores above 750 qualifying for the lowest slab. Education Loans are available to Indian students with a confirmed admission offer at a recognized institution, with a parent or guardian as co-applicant for loans above INR 750,000. [sources: kb-01,kb-07]\n\n----------\n\n{\"record_id\": \"CRED-0010\", \"found\": true, \"status\": \"Under Review\", \"loan_amount_inr\": 18530000, \"flagged_for_fraud_review\": true, \"days_since_created\": 17, \"escalation_score\": 0.7833, \"escalation_threshold\": 0.57, \"recommend_escalation\": true}",
+  "used_rag": true,
+  "used_lookup": true,
+  "record_id": "CRED-0010",
+  "grounded": true,
+  "escalation_recommended": true,
+  "sources": [
+    "kb-01",
+    "kb-07"
+  ]
+}
+
+=== Least-autonomy check ===
+{'retrieval': {'tool_names': ['rag_lookup'], 'has_lookup_tool': False}, 'lookup': {'tool_names': ['check_loan_application_status'], 'has_lookup_tool': True}, 'composer': {'tool_names': [], 'has_lookup_tool': False}}

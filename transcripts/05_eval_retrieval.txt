@@ -1,0 +1,48 @@
+
+=== kb_fixed (top-3) ===
+Q: What documents do I need for KYC?
+  retrieved parent docs (deduped, ranked): ['kb-04', 'kb-11']
+  relevant set: ['kb-04']
+  |retrieved ∩ relevant| = 1  precision = 1/2 = 0.500  recall = 1/1 = 1.000
+Q: How is my EMI calculated?
+  retrieved parent docs (deduped, ranked): ['kb-02']
+  relevant set: ['kb-02']
+  |retrieved ∩ relevant| = 1  precision = 1/1 = 1.000  recall = 1/1 = 1.000
+Q: What is the annual fee on my credit card?
+  retrieved parent docs (deduped, ranked): ['kb-03']
+  relevant set: ['kb-03']
+  |retrieved ∩ relevant| = 1  precision = 1/1 = 1.000  recall = 1/1 = 1.000
+Q: Can I close my savings account for free?
+  retrieved parent docs (deduped, ranked): ['kb-06']
+  relevant set: ['kb-06']
+  |retrieved ∩ relevant| = 1  precision = 1/1 = 1.000  recall = 1/1 = 1.000
+Q: What happens if I report a fraudulent transaction late?
+  retrieved parent docs (deduped, ranked): ['kb-05']
+  relevant set: ['kb-05']
+  |retrieved ∩ relevant| = 1  precision = 1/1 = 1.000  recall = 1/1 = 1.000
+  -- kb_fixed averages: precision=0.900 recall=1.000 --
+
+=== kb_sentence (top-3) ===
+Q: What documents do I need for KYC?
+  retrieved parent docs (deduped, ranked): ['kb-04', 'kb-11']
+  relevant set: ['kb-04']
+  |retrieved ∩ relevant| = 1  precision = 1/2 = 0.500  recall = 1/1 = 1.000
+Q: How is my EMI calculated?
+  retrieved parent docs (deduped, ranked): ['kb-02']
+  relevant set: ['kb-02']
+  |retrieved ∩ relevant| = 1  precision = 1/1 = 1.000  recall = 1/1 = 1.000
+Q: What is the annual fee on my credit card?
+  retrieved parent docs (deduped, ranked): ['kb-03']
+  relevant set: ['kb-03']
+  |retrieved ∩ relevant| = 1  precision = 1/1 = 1.000  recall = 1/1 = 1.000
+Q: Can I close my savings account for free?
+  retrieved parent docs (deduped, ranked): ['kb-06']
+  relevant set: ['kb-06']
+  |retrieved ∩ relevant| = 1  precision = 1/1 = 1.000  recall = 1/1 = 1.000
+Q: What happens if I report a fraudulent transaction late?
+  retrieved parent docs (deduped, ranked): ['kb-05', 'kb-02']
+  relevant set: ['kb-05']
+  |retrieved ∩ relevant| = 1  precision = 1/2 = 0.500  recall = 1/1 = 1.000
+  -- kb_sentence averages: precision=0.800 recall=1.000 --
+
+kb_fixed avg P=0.900 R=1.000 | kb_sentence avg P=0.800 R=1.000

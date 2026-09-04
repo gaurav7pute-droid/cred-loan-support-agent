@@ -1,0 +1,4 @@
+ESCALATION_THRESHOLD=0.57
+12/60 applications recommended for escalation
+Sample: {'record_id': 'CRED-0001', 'found': True, 'status': 'Under Review', 'loan_amount_inr': 7045000, 'flagged_for_fraud_review': False, 'days_since_created': 13, 'escalation_score': 0.2167, 'escalation_threshold': 0.57, 'recommend_escalation': False}
+Unknown id: {'record_id': 'CRED-9999', 'found': False, 'error': "No loan application found with record_id='CRED-9999'"}

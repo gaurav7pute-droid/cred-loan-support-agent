@@ -1,0 +1,15 @@
+Base SEED = 42, resolved seed used = 42 (0 seed advance(s) needed)
+Total records: 60
+Per-category counts (required >=3 each):
+  Personal Loan: 21
+  Home Loan: 10
+  Auto Loan: 10
+  Education Loan: 12
+  Business Loan: 7
+Per-status counts (required >=1 each):
+  Submitted: 13
+  Under Review: 10
+  Approved: 13
+  Rejected: 12
+  Disbursed: 12
+flagged_for_fraud_review percentage: 25.0% (required band 10%-30%)
