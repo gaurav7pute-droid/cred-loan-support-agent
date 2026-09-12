@@ -1,5 +1,5 @@
 """
-review_stage.py -- Part 4 Task 14: a 2-agent Autogen RoundRobinGroupChat
+review_stage.py  a 2-agent Autogen RoundRobinGroupChat
 review stage (Policy-Compliance-Reviewer + Final-Editor) that runs after the
 CrewAI Composer's draft answer, using a keyless, MOCK_LLM-only
 ReplayChatCompletionClient (autogen_ext.models.replay) for each agent so

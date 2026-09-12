@@ -1,5 +1,5 @@
 """
-app.py -- Part 3 Task 11 & 12: FastAPI deployment of the Part 2 crew.
+
 
 Endpoints:
   POST /ask                  -- ask a policy question / check a loan status
@@ -145,7 +145,7 @@ def add_document(req: AddDocumentRequest) -> AddDocumentResponse:
             metadatas=[{"doc_id": c["doc_id"], "topic": c["topic"]} for c in chunks],
         )
 
-    KNOWLEDGE_BASE.append(doc)  # keep the in-process KB list consistent for this run
+    KNOWLEDGE_BASE.append(doc)  
 
     log_request(trace_id, "POST /add-document", "n/a", f"[doc_id={req.doc_id}]", 0.0, {"status": "ok"})
     return AddDocumentResponse(
@@ -173,8 +173,7 @@ async def ws_chat(websocket: WebSocket):
             except HTTPException as e:
                 await websocket.send_text(json.dumps({"error": e.detail}))
     except WebSocketDisconnect:
-        # Client disconnected mid-conversation -- log it and return so the
-        # server keeps running normally for every other connected client.
+        
         log_request(str(uuid.uuid4()), "WS /ws/chat", session_id, "[client disconnected]", 0.0,
                     {"status": "disconnected"})
         return

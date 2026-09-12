@@ -1,5 +1,5 @@
 """
-rag_core.py -- Part 1 Tasks 3-5: embedding + dual-collection ChromaDB
+rag_core.py --  embedding + dual-collection ChromaDB
 indexing + grounded generation (MOCK_LLM) + doc-level precision/recall
 evaluation across both chunking strategies.
 

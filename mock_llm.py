@@ -1,5 +1,5 @@
 """
-mock_llm.py -- Part 2 Task 7: the required MOCK_LLM for CrewAI, implemented
+mock_llm.py --  the required MOCK_LLM for CrewAI, implemented
 by extending crewai.llms.base_llm.BaseLLM (CrewAI's documented extension
 point for a non-litellm LLM), per the brief's explicit instruction that this
 is "more involved than a simple flag."

@@ -1,10 +1,9 @@
 """
-crew.py -- Part 2 Task 7: a CrewAI crew with 3 agents (Retrieval, Lookup,
+crew.py  (Retrieval, Lookup,
 Composer), each using its own role-configured MockCrewLLM, wired with tools
-built from the Part 1 RAG core (Task 3-5, recommended chunking strategy) and
-the Part 2 Task 6 status-lookup tool.
+built from the Part 1 RAG core
 
-This module is also where Part 4 Task 15's least-autonomy wiring lives:
+least-autonomy wiring lives:
 `check_loan_application_status` is attached to exactly one Agent's
 tools=[...] list (the Lookup Agent) -- see build_agents() below and
 governance.assert_least_autonomy().

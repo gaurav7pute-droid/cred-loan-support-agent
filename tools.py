@@ -1,5 +1,5 @@
 """
-tools.py -- Part 2 Task 6: check_loan_application_status with a DESIGNED
+tools.py --  check_loan_application_status with a DESIGNED
 escalation_score (not a bare boolean OR of flagged_for_fraud_review).
 
 Escalation-score formula

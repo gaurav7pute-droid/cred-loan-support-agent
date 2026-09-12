@@ -1,5 +1,5 @@
 """
-cache.py -- Part 4 Task 16: in-memory response cache keyed by normalized
+cache.py 
 query text, for the grounded-generation step.
 """
 import re

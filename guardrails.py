@@ -1,5 +1,5 @@
 """
-guardrails.py -- Part 2 Task 10.
+guardrails.py -- 
 
 Input-side guardrails:
   1. PII masking for the fixed-format fields identified in the brief: PAN,

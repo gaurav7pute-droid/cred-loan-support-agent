@@ -1,7 +1,7 @@
 """
-schemas.py -- Part 2 Task 9: the Pydantic structured-output schema every
+schemas.py  the Pydantic structured-output schema every
 crew response must conform to, plus the Autogen review-stage verdict model
-(Part 4 Task 14) and the FastAPI request/response models (Part 3 Task 11).
+ and the FastAPI request/response models .
 """
 from typing import List, Optional
 
@@ -25,7 +25,7 @@ class CredResponse(BaseModel):
 
 
 class ReviewVerdict(BaseModel):
-    """Part 4 Task 14: the Autogen Final-Editor's structured verdict."""
+     the Autogen Final-Editor's structured verdict."""
 
     approved: bool
     final_answer: str

@@ -1,5 +1,5 @@
 """
-eval_retrieval.py -- Part 1 Task 5: doc-level precision/recall for BOTH
+eval_retrieval.py -- doc-level precision/recall for BOTH
 chunking-strategy collections on the same 5 in-scope queries, with visible
 per-query arithmetic, plus a numbers-cited recommendation.
 """

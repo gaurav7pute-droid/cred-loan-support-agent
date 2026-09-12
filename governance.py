@@ -1,5 +1,5 @@
 """
-governance.py -- Part 4 Task 15: the four-layer AI-governance model applied
+governance.py -- the four-layer AI-governance model applied
 at the Application and Runtime layers.
 
 Application layer -- principle of least autonomy

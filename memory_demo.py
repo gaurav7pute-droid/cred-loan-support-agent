@@ -1,6 +1,6 @@
 """
-memory_demo.py -- Part 2 Task 8: LangChain session-based memory wrapping the
-Part 2 Task 7 crew, using RunnableWithMessageHistory + an in-memory chat
+memory_demo.py --  LangChain session-based memory wrapping the
+, using RunnableWithMessageHistory + an in-memory chat
 history store keyed by session_id.
 
 NOTE (expected, per the brief): RunnableWithMessageHistory raises a

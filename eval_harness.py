@@ -1,5 +1,5 @@
 """
-eval_harness.py -- Part 3 Task 13: a 15-query test set scored on Accuracy,
+eval_harness.py  scored on Accuracy,
 Grounding, Completeness, and Safety via an LLM-as-judge prompt running under
 MOCK_LLM.
 

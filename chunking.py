@@ -1,5 +1,5 @@
 """
-chunking.py -- The two chunking strategies required by Part 1 Task 3.
+chunking.py 
 
 Both operate on a single KB document's `text` field and return a list of
 chunk dicts: {"chunk_id", "doc_id", "topic", "text"}. Kept dependency-free
